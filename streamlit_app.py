@@ -72,10 +72,6 @@ if file is not None:
                 else:
                     json_resp = st.expander("Invalid Json Format Output")
                     json_resp.write(responses)
-                for i, res in enumerate(responses):
-                    expander = st.expander("Q" + str(i+1) + ". " + res["question"])
-                    expander.write("Answer: " + res["answer"])
-                    expander.write("BTL: " + str(res["addressed_BTL"]))
             except Exception as e:
                 exception_ex = st.expander("Error Message")
                 exception_ex.write(e)
