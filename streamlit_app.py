@@ -68,7 +68,7 @@ if file is not None:
                     except:
                         expected_resp = st.expander("Failed to load Json")
                         expected_resp.write(responses)
-                    print("\n\nFormatted Responses : ", responses)
+                    # print("\n\nFormatted Responses : ", responses)
                 else:
                     json_resp = st.expander("Invalid Json Format Output")
                     json_resp.write(responses)
