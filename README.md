@@ -1,8 +1,6 @@
-# 🎈 Blank app template
+# 🎈 A Question and Answer Generation App
 
-A simple Streamlit app template for you to modify!
-
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+Upload a pdf file and generate questions to make your learning concrete.
 
 ### How to run it on your own machine
 
@@ -11,7 +9,6 @@ A simple Streamlit app template for you to modify!
    ```
    $ pip install -r requirements.txt
    ```
-
 2. Run the app
 
    ```
