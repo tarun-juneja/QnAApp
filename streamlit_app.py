@@ -53,7 +53,7 @@ def download_json():
             print(jsonfiles)
             with open(f"./data/{jsonfiles}", 'rb') as jfile:
                 btn = st.download_button(
-                    label="Download Json File",
+                    label="Download JSON File",
                     data=jfile,
                     file_name=jsonfiles,
                     mime="application/json",
