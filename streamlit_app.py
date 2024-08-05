@@ -15,6 +15,7 @@ file = st.file_uploader("Upload Unit document here", type=['pdf'], accept_multip
 
 def download_audio():
     # ziph is zipfile handle
+
     print("In download audio")
     with open(f'./data/{file.name.replace(".pdf", "").replace(".", "_").replace(" ", "_")}.mp3', 'rb') as audiof:
         btn = st.download_button(
@@ -23,6 +24,7 @@ def download_audio():
             file_name="audio.mp3",
             mime="audio/mpeg",
         )
+    os.remove(f'./data/{file.name.replace(".pdf", "").replace(".", "_").replace(" ", "_")}.mp3')
 
 def download_json():
     print("In download Json ")
