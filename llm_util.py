@@ -5,7 +5,7 @@ import fitz
 # from langchain_together import ChatTogether
 # from langchain_huggingface import HuggingFaceEmbeddings
 # from langchain_fireworks import Fireworks
-# from langchain_groq import ChatGroq
+from langchain_groq import ChatGroq
 from langchain_cohere import ChatCohere
 from langchain_core.prompts import PromptTemplate
 from gtts import gTTS
@@ -22,7 +22,8 @@ import os
 
 class generator_llm:
     def __init__(self, file) -> None:
-        self.llm=ChatCohere(cohere_api_key=os.getenv("COHERE_API_KEY"), max_tokens=None, model='command-r-plus', temperature=0.5, seed=444)
+        # self.llm=ChatCohere(cohere_api_key=os.getenv("COHERE_API_KEY"), max_tokens=None, model='command-r-plus', temperature=0.5, seed=444)
+        self.llm=ChatGroq(model="llama-3.1-70b-versatile", api_key=os.getenv("GROQ_API_KEY"), temperature=0.0000000000001, seed=3242)
         self.file = file
         pdf_bytes = self.file.getvalue()
         self.documents = fitz.open(stream=pdf_bytes, filetype="pdf")
